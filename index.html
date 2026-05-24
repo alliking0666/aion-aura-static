@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AION AURA NET</title>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <main class="app">
+
+    <section class="card">
+
+      <div class="logo">💜</div>
+
+      <h1>AION AURA NET</h1>
+
+      <p class="subtitle">
+        Anonymous video, voice and text roulette platform
+      </p>
+
+      <div class="modes">
+
+        <button class="mode active" id="videoBtn">
+          🎥 Video Roulette
+        </button>
+
+        <button class="mode" id="voiceBtn">
+          🎙 Voice Roulette
+        </button>
+
+        <button class="mode" id="textBtn">
+          💬 Text Roulette
+        </button>
+
+      </div>
+
+      <button class="start" id="startBtn">
+        🚀 Start Random Session
+      </button>
+
+      <p id="status">
+        Selected mode: video
+      </p>
+
+    </section>
+
+  </main>
+
+<script>
+
+let selectedMode = "video";
+
+const status = document.getElementById("status");
+
+const buttons = {
+  video: document.getElementById("videoBtn"),
+  voice: document.getElementById("voiceBtn"),
+  text: document.getElementById("textBtn")
+};
+
+function selectMode(mode) {
+
+  selectedMode = mode;
+
+  Object.values(buttons).forEach((button) => {
+    button.classList.remove("active");
+  });
+
+  buttons[mode].classList.add("active");
+
+  status.innerText = "Selected mode: " + mode;
+}
+
+buttons.video.onclick = () => selectMode("video");
+buttons.voice.onclick = () => selectMode("voice");
+buttons.text.onclick = () => selectMode("text");
+
+document.getElementById("startBtn").onclick = () => {
+
+  status.innerText =
+    "Searching for random partner in " +
+    selectedMode +
+    " mode...";
+};
+
+</script>
+
+</body>
+</html>

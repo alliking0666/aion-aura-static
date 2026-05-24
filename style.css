@@ -1,0 +1,80 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+  color: #ffffff;
+  background:
+    radial-gradient(circle at top, rgba(255, 79, 216, 0.35), transparent 35%),
+    linear-gradient(135deg, #080812, #1a0f2e, #2a0f3f);
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.card {
+  width: 100%;
+  max-width: 430px;
+  padding: 30px;
+  text-align: center;
+  border-radius: 30px;
+  background: rgba(255, 255, 255, 0.09);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 0 45px rgba(255, 79, 216, 0.28);
+  backdrop-filter: blur(18px);
+}
+
+.logo {
+  font-size: 58px;
+  margin-bottom: 12px;
+}
+
+h1 {
+  margin: 0;
+  font-size: 32px;
+}
+
+.subtitle {
+  color: #d7cfff;
+  margin: 12px 0 24px;
+}
+
+.modes {
+  display: grid;
+  gap: 12px;
+  margin-bottom: 22px;
+}
+
+button {
+  width: 100%;
+  border: none;
+  border-radius: 20px;
+  padding: 16px;
+  font-size: 16px;
+  color: white;
+  background: rgba(255, 255, 255, 0.12);
+}
+
+button.active {
+  background: linear-gradient(135deg, #ff4fd8, #9b5cff);
+  box-shadow: 0 0 25px rgba(255, 79, 216, 0.7);
+}
+
+.start {
+  font-weight: bold;
+  background: linear-gradient(135deg, #9b5cff, #ff4fd8);
+}
+
+#status {
+  min-height: 24px;
+  color: #c9c2df;
+  margin-top: 18px;
+}
